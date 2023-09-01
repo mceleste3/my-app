@@ -1,20 +1,21 @@
-"use client";
+/*"use client";
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { ChangeEventHandler, useState } from "react";
 
-export default function AddPlayer(){
+export default function AddPlayer(props: any){
     const supabase = createClientComponentClient();
     const [name, setName] = useState('');
 
     //const selectFile: ChangeEventHandler<HTMLInputElement> = (e) => {} pARA SELECCIONAR UN ELEMENTO
 
-
-    const addUser = async(nickname:String) => {
-        let {data: matches, error} = await supabase.from('matches').insert({name:nickname}).single();
+    const add = async(nickname:String) => {
+        let {data, error} = await supabase.from('matches').insert({name:nickname}).single();
         if(error){
             console.log(error);
         }
+        props.;
+
     };
 
 
@@ -28,7 +29,7 @@ export default function AddPlayer(){
                 setName(e.target.value);
             }}
         />
-        <button className="py-1 px3 rounded" onClick={() => addUser(name)}>Añadir</button>
+        <button className="py-1 px3 rounded" onClick={() => add(name)}>Añadir</button>
         </>
     )
-}
+}*/

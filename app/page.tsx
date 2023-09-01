@@ -2,8 +2,8 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs'
 import { cookies } from 'next/headers'
 //import { redirect } from 'next/navigation'
 //import { useEffect, useState} from 'react'
-import AddUser from './componets/AddPlayer'
-import AddPlayer from './componets/AddPlayer';
+//import AddUser from './componets/AddPlayer'
+//import AddPlayer from './componets/AddPlayer';
 import PlayerItem from './componets/PlayerItem';
 import PlayerList from './componets/PlayerList';
 
@@ -71,7 +71,6 @@ export default async function Home() {
 
   return (
     <>
-      <AddPlayer />
       <PlayerList matches = {matches}/>
     </>
   )

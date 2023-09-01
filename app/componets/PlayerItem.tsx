@@ -1,10 +1,10 @@
 
 
-export default function PlayerItem(props:any){
+export default function PlayerItem({player}:any){
     //console.log(props.match.name)
     return(
         <div>
-            {props.match.name}
+            {player.name}
         </div>
     )
 
